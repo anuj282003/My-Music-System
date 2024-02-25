@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome To Admin Page</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+     background-image: url('https://images.unsplash.com/photo-1531251445707-1f000e1e87d0');
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .button {
+     background-color: #007bff;
+    color: #fff;
+    border: 5px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .button:hover {
+    background-color: #0056b3;
+  }
+
+  .card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+  .card h2 {
+    margin-top: 0;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+  }
+
+  .col {
+    flex: 1;
+    padding: 10px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .col {
+      flex: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Welcome To Admin Page</h1>
+
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <h2>Add Songs</h2>
+        <a href="/map-songs" class="button">Add Songs</a>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <h2>View Songs</h2>
+        <a href="/map-viewsongs" class="button">View Songs</a>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <h2>Create Playlist</h2>
+        <a href="/createplaylist" class="button">Create Playlist</a>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <h2>View Playlists</h2>
+        <a href="/viewPlaylists" class="button">View Playlists</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

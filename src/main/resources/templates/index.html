@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Streaming Landing Page</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts - Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    /* Custom styles */
+
+    /* Font */
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f6f6f6
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #3e3e3e !important;
+    }
+
+    .navbar-brand {
+      color: #fff !important;
+      font-weight: bold;
+    }
+
+    .navbar-nav .nav-link {
+      color: #fff !important;
+    }
+
+    /* Header */
+    .jumbotron {
+      background-color: #f6f6f6;
+      color: #3e3e3e;
+      text-align: center;
+      padding: 100px 0;
+    }
+ .jumbotron h1 {
+      font-size: 3.5rem;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: .15em solid orange; /* Typing cursor */
+      
+    }
+ 
+    /* Featured Playlists */
+    .card {
+      margin-bottom: 30px;
+      border: none;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #343a40;
+      color: #fff;
+      padding: 20px 0;
+    }
+
+    /* Animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animated {
+      animation-duration: 1s;
+      animation-fill-mode: both;
+      opacity: 0;
+    }
+
+    .fadeInUp {
+      animation-name: fadeInUp;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">MYMUSIC</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="jumbotron jumbotron-fluid text-center animated fadeInUp">
+    <div class="container">
+      <h1 id="typing-text"></h1>
+      <p class="lead">Stream your favorite music anytime, anywhere.</p>
+      <a href="/map-register" class="btn btn-primary btn-lg">Start Streaming</a>
+    </div>
+  </header>
+
+  <section class="container">
+    <h2 class="text-center mb-4">Featured Playlists</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1460036521480-ff49c08c2781?q=80&w=1473&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Playlist 1</h5>
+            <p class="card-text">Soothing Serenade" is a tranquil melody that gently cradles the soul with its tender notes and gentle harmonies. This serene composition invites listeners to unwind and find solace in its calming embrace. With its delicate instrumentation and soothing melodies, "Soothing Serenade" is the perfect companion for moments of relaxation and inner reflection.</p>
+            <a href="#" class="btn btn-primary">Play</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://media.istockphoto.com/id/161839324/photo/rock-and-roll.jpg?s=1024x1024&w=is&k=20&c=aZO-ijzvUk7epLwu_DvRR-lXF-EN63sPAQzArENocTg=" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Playlist 2</h5>
+            <p class="card-text">Midnight Jazz" is a captivating fusion of smooth rhythms and soulful melodies that transport listeners to the smoky jazz clubs of yesteryears. With its sultry saxophone solos, velvety piano chords, and swinging bass lines, this enchanting composition captures the essence of the jazz era with sophistication and allure. Whether you'ring of timeless eleg.</p>
+            <a href="#" class="btn btn-primary">Play</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1513883049090-d0b7439799bf?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Playlist 3</h5>
+            <p class="card-text">Timeless Sonata" is a poignant masterpiece that transcends generations with its emotive melodies and intricate harmonies. With graceful piano motifs and stirring orchestral arrangements, this classic composition evokes a sense of nostalgia and wonder. A timeless treasure, "Timeless Sonata" stands as a testament to the enduring power.</p>
+            <a href="#" class="btn btn-primary">Play</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-white text-center py-4">
+    <div class="container">
+      <p>&copy; 2024 Music Streaming. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Animation JS -->
+  <script>
+    $(document).ready(function() {
+      $('.animated').addClass('fadeInUp');
+    });
+  </script>
+   <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const text = "Welcome to Music Streaming";
+      let index = 0;
+      const typingTextElement = document.getElementById("typing-text");
+      function typeWriter() {
+        if (index < text.length) {
+          typingTextElement.textContent += text.charAt(index);
+          index++;
+          setTimeout(typeWriter, 120); // Adjust typing speed here (in milliseconds)
+        }
+      }
+      typeWriter();
+    });
+  </script>
+</body>
+</html>

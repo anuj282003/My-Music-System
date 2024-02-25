@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<table border>
+		<thead>
+			<tr>
+				<th>Playlist ID</th>
+				<th>Playlist NAME</th>
+				<th>Playlist SONGS</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr th:each="pl:${plist}">
+				<td th:text="${pl.id}"> </td>
+				<td th:text="${pl.name}"> </td>
+				<td >
+					<ul>
+						<li th:each="s : ${pl.songs}" >
+							<span th:text="${s.name}"></span>
+							<audio controls>
+		        				<source th:src="${s.link}" type="audio/mpeg">
+		    				</audio>
+						</li>
+					</ul>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+<!--  
+<h2>One-Click Playlist</h2>
+<p>Click on the image to show all songs:</p>
+ 
+<div class=containercard th:each="pl:${plist}">
+<div class="card" >
+  <li th:each="s : ${pl.songs}" >
+  <img class="card-img-top"  th:href="s.slink" alt="Card image cap" id="showPlaylist">
+    <div class="card-body">
+  <!--    <h5 class="card-title" th:text="${songlist.name}" >Card title</h5>
+    <p class="card-text" th:text="${songlist.genre}">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <audio href="#" th:src="${songlist.link}"   style="width:10rem" controls>Play Song</audio>
+
+					<span th:text="${s.name}"></span>
+					<audio controls>
+		        	<source th:src="${s.link}" type="audio/mpeg">
+		    	  </audio>
+			 </li>
+  </div>
+</div>
+</div>
+</div>
+--> 
+
+<script>
+    // Function to show/hide the playlist
+    document.getElementById('showPlaylist').addEventListener('click', function() {
+        var playlist = document.getElementById('songs');
+        if (playlist.style.display === 'none') {
+            playlist.style.display = 'block';
+        } else {
+            playlist.style.display = 'none';
+        }
+    });
+
+    // Function to add a song to the playlist
+    function addToPlaylist(song) {
+        var playlist = document.getElementById('playlist');
+        var li = document.createElement('li');
+        li.textContent = song;
+        playlist.appendChild(li);
+    }
+</script>
+</body>
+</html>

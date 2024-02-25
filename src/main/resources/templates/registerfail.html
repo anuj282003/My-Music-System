@@ -1,0 +1,70 @@
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>User Registration Form</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(to right bottom, #4d7fff, #59e0c5);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 400px;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  p {
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn:hover {
+    background-color: #0056b3;
+  }
+</style>
+<script>
+  // JavaScript function to redirect to the registration page
+  function redirectToRegister() {
+    window.location.href = "/map-register"; // Change "register.html" to the URL of your registration page
+  }
+</script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Registration Failed!</h2>
+  <p>Something went wrong during registration.</p>
+  <button class="btn" onclick="redirectToRegister()">Try Again</button>
+</div>
+
+</body>
+</html>
